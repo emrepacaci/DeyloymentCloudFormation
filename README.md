@@ -1,6 +1,19 @@
-# Infrastructure Deployment.
-This project consist of network and server stack.
-The Network stack deploys Virtual Private Cloud, its public subnet, private subnet, and also it deploys Internet gateway, Nat Gatewat for private subnets to reach internet without exposing private ip address 
-The Server stack deploys two security groups for our load balancer and web server group.Also, created role, policy and instace profile for allowing our web instance to get index.html file from S3 bucket. Then it deploys launch configuration to create instances with Auto scalling group component. Lastly, it deploys load balancer with listener, listener rule, and target group component to associate with Auto scalling group.
+## About This project
+This project deploys the cloud infraestructure and a basic website on AWS, using AWS Cloud Formation
 
-Also, you can find a diagram which indicates our infrastructure visual. 
+## Prerequisites
+* You need to create an account in AWS
+
+## Usage
+* You need to modify the template in network.yml to have your account settings
+
+#### 2. Create the infrastructure and deploy the website
+  Run this in your terminal
+
+     $ ./create.sh yourStackName network.yml network-parameters.json
+#### 3. Update the infrastructure and deploy the website
+  Run this in your terminal
+  
+    $ ./update.sh yourStackName network.yml network-parameters.json
+#### 4. Open the website
+  To open the website you need the URL of the Load Balancer
