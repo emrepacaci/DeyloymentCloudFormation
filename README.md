@@ -18,10 +18,10 @@ This project deploys the cloud infraestructure and a basic website on AWS, using
     
 #### 4. Create the Server infrastructure and deploy the website
     
-     $ ./create.sh yourServerStackName server.yml server-parameters.json
+     $ ./create.sh yourServerStackName server.yml server.json
 #### 5. Update the Server infrastructure and deploy the website
     
-     $ ./update.sh yourServerStackName server.yml server-parameters.json
+     $ ./update.sh yourServerStackName server.yml server.json
      
 #### 4. Open the website
   To open the website you need the URL of the Load Balancer
